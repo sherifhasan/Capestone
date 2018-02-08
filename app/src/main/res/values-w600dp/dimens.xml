@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin_16dp">16dp</dimen>
+    <dimen name="activity_vertical_margin_16dp">16dp</dimen>
+    <dimen name="fab_margin_16dp">16dp</dimen>
+
+    <dimen name="form_element_height">66dp</dimen>
+    <dimen name="form_element_width">520dp</dimen>
+    <dimen name="form_element_text_size">22sp</dimen>
+</resources>

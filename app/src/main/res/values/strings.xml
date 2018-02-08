@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">News app</string>
+    <string name="NoInternet">No internet connection</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="add_widget">Add widget</string>
+    <string name="add">added to widget</string>
+    <string name="appwidget_text">EXAMPLE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test">Test</string>
+    <string name="Home">Home</string>
+    <string name="published">Published at : </string>
+    <string name="Title">Title : </string>
+    <string name="News_image">News banner image</string>
+    <string name="title_activity_news_details">NewsDetailsActivity</string>
+    <string name="Author">Author :</string>
+    <string name="desc">Description :</string>
+    <string name="news_url">News url :</string>
+    <string name="read_later">Read later</string>
+    <string name="article_image">article image</string>
+    <string name="source">Source</string>
+
+</resources>

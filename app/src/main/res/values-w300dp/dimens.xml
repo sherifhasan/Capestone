@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin_16dp">16dp</dimen>
+    <dimen name="activity_vertical_margin_16dp">16dp</dimen>
+    <dimen name="fab_margin_16dp">16dp</dimen>
+
+    <dimen name="form_element_height">33dp</dimen>
+    <dimen name="form_element_width">280dp</dimen>
+    <dimen name="form_element_text_size">11sp</dimen>
+
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+    <dimen name="nav_header_vertical_spacing">12dp</dimen>
+    <dimen name="nav_header_height">80dp</dimen>
+    <dimen name="fab_margin">8dp</dimen>
+
+    <dimen name="screen_width">300dp</dimen>
+    <dimen name="half_screen_width">150dp</dimen>
+
+    <dimen name="home_pager_height">140dp</dimen>
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="list_item_image_dimen">40dp</dimen>
+
+    <dimen name="thumbnail_image_dimen">60dp</dimen>
+
+    <dimen name="extra_little_space">3dp</dimen>
+    <dimen name="little_space">6dp</dimen>
+    <dimen name="some_little_space">7dp</dimen>
+    <dimen name="more_little_space">8dp</dimen>
+    <dimen name="some_space">12dp</dimen>=
+    <dimen name="more_space">24dp</dimen>
+    <dimen name="some_more_space">36dp</dimen>
+    <dimen name="large_space">48dp</dimen>
+    <dimen name="some_large_space">60dp</dimen>
+    <dimen name="very_large_space">72dp</dimen>
+    <dimen name="extra_large_space">96dp</dimen>
+
+    <dimen name="extra_small_text_size">12sp</dimen>
+    <dimen name="small_text_size">13sp</dimen>
+    <dimen name="mid_text_size">14sp</dimen>
+    <dimen name="large_text_size">16sp</dimen>
+    <dimen name="extra_large_text_size">20sp</dimen>
+    <dimen name="round_corner_radius">3dp</dimen>
+
+    <dimen name="two_lines_extra_small_text_size">24sp</dimen>
+    <dimen name="two_lines_small_text_size">33sp</dimen>
+    <dimen name="two_lines_mid_text_size">36sp</dimen>
+    <dimen name="two_lines_large_text_size">45sp</dimen>
+    <dimen name="two_lines_extra_large_text_size">48sp</dimen>
+
+    <dimen name="list_item_image_height">120dp</dimen>
+    <dimen name="list_item_small_image_height">80dp</dimen>
+
+</resources>

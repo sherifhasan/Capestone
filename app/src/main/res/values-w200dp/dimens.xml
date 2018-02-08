@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin_16dp">16dp</dimen>
+    <dimen name="activity_vertical_margin_16dp">16dp</dimen>
+    <dimen name="fab_margin_16dp">16dp</dimen>
+
+    <dimen name="form_element_height">27dp</dimen>
+    <dimen name="form_element_width">240dp</dimen>
+    <dimen name="form_element_text_size">8sp</dimen>
+
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">80dp</dimen>
+    <dimen name="fab_margin">8dp</dimen>
+
+    <dimen name="screen_width">200dp</dimen>
+    <dimen name="half_screen_width">100dp</dimen>
+
+
+    <dimen name="home_pager_height">95dp</dimen>
+    <dimen name="list_item_image_dimen">30dp</dimen>
+
+    <dimen name="dots_height">20dp</dimen>
+    <dimen name="dots_margin_bottom">15dp</dimen>
+
+    <dimen name="thumbnail_image_dimen">40dp</dimen>
+
+    <dimen name="extra_little_space">2dp</dimen>
+    <dimen name="some_little_space">3dp</dimen>
+    <dimen name="little_space">4dp</dimen>
+    <dimen name="more_little_space">6dp</dimen>
+    <dimen name="some_space">8dp</dimen>
+    <dimen name="more_space">16dp</dimen>
+    <dimen name="some_more_space">24dp</dimen>
+    <dimen name="large_space">32dp</dimen>
+    <dimen name="some_large_space">40dp</dimen>
+    <dimen name="very_large_space">48dp</dimen>
+    <dimen name="extra_large_space">64dp</dimen>
+
+    <dimen name="extra_small_text_size">9sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="mid_text_size">12sp</dimen>
+    <dimen name="large_text_size">15sp</dimen>
+    <dimen name="extra_large_text_size">18sp</dimen>
+    <dimen name="round_corner_radius">2dp</dimen>
+
+    <dimen name="two_lines_extra_small_text_size">18sp</dimen>
+    <dimen name="two_lines_small_text_size">21sp</dimen>
+    <dimen name="two_lines_mid_text_size">24sp</dimen>
+    <dimen name="two_lines_large_text_size">30sp</dimen>
+    <dimen name="two_lines_extra_large_text_size">32sp</dimen>
+
+    <dimen name="list_item_image_height">80dp</dimen>
+    <dimen name="list_item_small_image_height">60dp</dimen>
+
+</resources>
