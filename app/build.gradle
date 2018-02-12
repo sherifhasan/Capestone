@@ -16,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -31,6 +32,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation 'nz.bradcampbell:paperparcel:2.0.5'
     implementation 'com.jakewharton:butterknife:8.8.1'

@@ -30,6 +30,15 @@ public class Article implements Parcelable {
     String urlToImage;
     @SerializedName("publishedAt")
     Date publishedAt;
+    String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Source getSource() {
         return source;

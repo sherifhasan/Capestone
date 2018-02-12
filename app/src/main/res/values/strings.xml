@@ -23,5 +23,8 @@
     <string name="read_later">Read later</string>
     <string name="article_image">article image</string>
     <string name="source">Source</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="news_list">Widget news list</string>
+    <string name="Latest">Latest News:</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package example.android.capestone.retrofit;
+package example.android.capestone.network.retrofit;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

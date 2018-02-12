@@ -21,7 +21,6 @@
             android:scaleType="centerCrop"
             tools:src="@drawable/read_later_icon" />
 
-
         <TextView
             android:id="@+id/article_author"
             android:layout_width="wrap_content"

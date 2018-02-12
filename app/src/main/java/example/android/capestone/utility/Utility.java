@@ -10,6 +10,7 @@ import android.net.ConnectivityManager;
 public class Utility {
     public final static String API_KEY = "52fdf019a14a41ca89f28af20df01134";
     public final static String COUNTRY = "us";
+    public static final String DATABASE_NAME = "articles";
 
 
     public static boolean isNetworkConnected(Context context) {

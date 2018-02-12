@@ -7,8 +7,8 @@ import java.util.List;
 
 import example.android.capestone.models.Article;
 import example.android.capestone.models.News;
-import example.android.capestone.retrofit.ApiClient;
-import example.android.capestone.retrofit.ApiInterface;
+import example.android.capestone.network.retrofit.ApiClient;
+import example.android.capestone.network.retrofit.ApiInterface;
 import example.android.capestone.ui.fragments.MainActivityFragment;
 import example.android.capestone.utility.Utility;
 import retrofit2.Call;

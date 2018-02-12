@@ -1,4 +1,4 @@
-package example.android.capestone.retrofit;
+package example.android.capestone.network.retrofit;
 
 import example.android.capestone.models.News;
 import retrofit2.Call;

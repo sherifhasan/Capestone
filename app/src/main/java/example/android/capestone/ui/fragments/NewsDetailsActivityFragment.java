@@ -88,7 +88,7 @@ public class NewsDetailsActivityFragment extends Fragment {
             description.setText(descString);
         }
         if (article.getUrl() != null && !TextUtils.isEmpty(article.getUrl())) {
-            String newsLink = "<font color='#ff4081'>" + article.getUrl() + "</font>";
+            String newsLink = "<font color='#ff4081'>" + "<u>" + article.getUrl() + "</u>" + "</font>";
             String newsUrlString = getString(R.string.news_url) + newsLink;
             newsUrl.setText(Html.fromHtml(newsUrlString));
             newsUrl.setOnClickListener(new View.OnClickListener() {

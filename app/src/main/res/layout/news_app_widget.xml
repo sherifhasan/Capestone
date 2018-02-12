@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/some_space"
+        android:layout_marginStart="@dimen/little_space"
+        android:layout_marginTop="@dimen/little_space"
+        android:text="@string/Latest"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/extra_large_text_size"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/news_list_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/little_space"
+        android:contentDescription="@string/news_list" />
+
+
+</LinearLayout>
