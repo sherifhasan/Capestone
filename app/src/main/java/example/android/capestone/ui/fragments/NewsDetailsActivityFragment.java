@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.text.TextUtils;
@@ -39,7 +40,8 @@ public class NewsDetailsActivityFragment extends Fragment {
     TextView newsUrl;
     @BindView(R.id.news_image_details)
     ImageView newsLogo;
-
+    @BindView(R.id.share_fab)
+    FloatingActionButton shareButton;
 
     public static NewsDetailsActivityFragment newInstance(Article article) {
         Bundle args = new Bundle();
@@ -105,6 +107,12 @@ public class NewsDetailsActivityFragment extends Fragment {
         if (article.getUrlToImage() != null && !TextUtils.isEmpty(article.getUrlToImage())) {
             Picasso.with(getActivity()).load(article.getUrlToImage()).into(newsLogo);
         }
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareArticleUrl();
+            }
+        });
     }
 
     private void openUrl(String url) {
@@ -112,6 +120,15 @@ public class NewsDetailsActivityFragment extends Fragment {
         i.setData(Uri.parse(url));
         startActivity(i);
     }
+
+    private void shareArticleUrl() {
+        Intent share = new Intent(android.content.Intent.ACTION_SEND);
+        share.setType("text/plain");
+        share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        share.putExtra(Intent.EXTRA_TEXT, article.getUrl());
+        startActivity(Intent.createChooser(share, getString(R.string.share)));
+    }
+
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {

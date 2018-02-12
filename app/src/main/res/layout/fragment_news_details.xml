@@ -75,6 +75,17 @@
             android:paddingTop="@dimen/little_space"
             android:textSize="@dimen/large_text_size" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/share_fab"
+            android:layout_width="@dimen/fab_width"
+            android:layout_height="@dimen/fab_height"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/add_fab_background"
+            android:contentDescription="@string/action_share"
+            android:src="@drawable/ic_share" />
+
     </LinearLayout>
 </ScrollView>
 

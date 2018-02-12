@@ -25,5 +25,7 @@
     <string name="no_internet">No internet connection</string>
     <string name="news_list">Widget news list</string>
     <string name="Latest">Latest News</string>
+    <string name="action_share">Share article url</string>
+    <string name="share">Share link!</string>
 
 </resources>
