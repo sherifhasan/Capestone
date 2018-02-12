@@ -16,12 +16,10 @@ public class NewsAppWidget extends AppWidgetProvider {
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.news_app_widget);
 
         Intent widgetServiceIntent = new Intent(context, ListWidgetService.class);
         views.setRemoteAdapter(R.id.news_list_widget, widgetServiceIntent);
-
 
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }

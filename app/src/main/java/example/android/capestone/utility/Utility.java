@@ -18,4 +18,5 @@ public class Utility {
         assert cm != null;
         return cm.getActiveNetworkInfo() != null;
     }
+
 }

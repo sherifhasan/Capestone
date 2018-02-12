@@ -1,5 +1,6 @@
 package example.android.capestone.ui.fragments;
 
+import android.content.ContentValues;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -14,11 +15,8 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +24,17 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.android.capestone.R;
+import example.android.capestone.data.ArticlesProvider;
 import example.android.capestone.models.Article;
 import example.android.capestone.presenter.NewsPresenter;
 import example.android.capestone.ui.activities.NewsDetailsActivity;
 import example.android.capestone.ui.adapters.NewsAdapter;
 import example.android.capestone.utility.Utility;
+
+import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_AUTHOR;
+import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_DESCRIPTION;
+import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_TITLE;
+import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_URL;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -82,28 +86,34 @@ public class MainActivityFragment extends Fragment {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         articleCloudEndPoint = mDatabase.child(Utility.DATABASE_NAME);
-        getArticles();
 
         return rootView;
     }
 
-    private void getArticles() {
-        final List<Article> articleFireBaseList = new ArrayList();
-        DatabaseReference scoresRef = FirebaseDatabase.getInstance().getReference(Utility.DATABASE_NAME);
-        scoresRef.orderByValue().limitToLast(4).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot singleSnapshot : dataSnapshot.getChildren()) {
-                    Article article = singleSnapshot.getValue(Article.class);
-                    articleFireBaseList.add(article);
-                }
-            }
+    private void saveArticlesLocally() {
+        getActivity().getContentResolver().delete(ArticlesProvider.Articles.articleUri, null, null);
+        ContentValues[] cvs = new ContentValues[mArticles.size()];
+        for (int i = 0; i < mArticles.size(); i++) {
+            Article article = mArticles.get(i);
+            cvs[i] = new ContentValues();
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.d("Database error", databaseError.getMessage());
+            if (article.getTitle() != null) {
+                cvs[i].put(COLUMN_TITLE, article.getTitle());
             }
-        });
+            if (article.getDescription() != null) {
+                cvs[i].put(COLUMN_DESCRIPTION, article.getDescription());
+            }
+            if (article.getUrl() != null) {
+                cvs[i].put(COLUMN_URL, article.getUrl());
+            }
+            if (article.getAuthor() != null) {
+                cvs[i].put(COLUMN_AUTHOR, article.getAuthor());
+            } else if (article.getSource() != null && article.getSource().getName() != null) {
+                cvs[i].put(COLUMN_AUTHOR, article.getSource().getName());
+            }
+        }
+        int numOfRows = getActivity().getContentResolver().bulkInsert(ArticlesProvider.Articles.articleUri, cvs);
+        Log.d("num of rows : ", String.valueOf(numOfRows));
 
     }
 
@@ -115,6 +125,7 @@ public class MainActivityFragment extends Fragment {
             article.setId(key);
             articleCloudEndPoint.child(key).setValue(article);
         }
+        saveArticlesLocally();
     }
 
 

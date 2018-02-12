@@ -42,6 +42,10 @@
         <service
             android:name=".ui.widgets.ListWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <provider
+            android:authorities="example.android.capestone"
+            android:name="example.android.capestone.data.generated.ArticlesProvider"
+            android:exported="true" />
     </application>
 
 </manifest>
