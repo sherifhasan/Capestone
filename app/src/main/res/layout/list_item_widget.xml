@@ -4,14 +4,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/little_space"
-        android:text="@string/Latest"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/extra_large_text_size"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/widget_news_title"

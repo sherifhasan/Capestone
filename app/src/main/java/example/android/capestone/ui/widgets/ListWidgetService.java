@@ -85,7 +85,7 @@ public class ListWidgetService extends RemoteViewsService {
 
         @Override
         public int getViewTypeCount() {
-            return 0;
+            return 1;
         }
 
         @Override
@@ -95,7 +95,7 @@ public class ListWidgetService extends RemoteViewsService {
 
         @Override
         public boolean hasStableIds() {
-            return true;
+            return false;
         }
     }
 }
