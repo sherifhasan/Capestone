@@ -3,6 +3,7 @@ package example.android.capestone.data.sync;
 import android.accounts.Account;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SyncResult;
@@ -32,7 +33,9 @@ import static example.android.capestone.data.database.ArticlesContract.ArticlesT
 /**
  * Created by sheri on 2/14/2018.
  */
-
+/*
+*
+* */
 public class ArticlesSyncAdapter extends AbstractThreadedSyncAdapter {
 
     public ArticlesSyncAdapter(Context context, boolean autoInitialize) {
