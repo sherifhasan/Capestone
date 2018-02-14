@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation 'nz.bradcampbell:paperparcel:2.0.5'
     implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
     annotationProcessor 'net.simonvt.schematic:schematic-compiler:0.7.0'
     implementation 'net.simonvt.schematic:schematic:0.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'

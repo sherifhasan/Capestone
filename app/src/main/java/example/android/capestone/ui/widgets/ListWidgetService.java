@@ -8,15 +8,16 @@ import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import example.android.capestone.R;
-import example.android.capestone.data.ArticlesProvider;
+import example.android.capestone.data.database.ArticlesProvider;
 
-import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_DESCRIPTION;
-import static example.android.capestone.data.ArticlesContract.ArticlesTableEntry.COLUMN_TITLE;
+import static example.android.capestone.data.database.ArticlesContract.ArticlesTableEntry.COLUMN_DESCRIPTION;
+import static example.android.capestone.data.database.ArticlesContract.ArticlesTableEntry.COLUMN_TITLE;
 
 /**
  * Created by sheri on 2/12/2018.
  */
 public class ListWidgetService extends RemoteViewsService {
+
 
     @Override
     public RemoteViewsFactory onGetViewFactory(Intent intent) {

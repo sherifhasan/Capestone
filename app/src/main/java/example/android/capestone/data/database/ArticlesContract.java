@@ -1,4 +1,4 @@
-package example.android.capestone.data;
+package example.android.capestone.data.database;
 
 import net.simonvt.schematic.annotation.DataType;
 import net.simonvt.schematic.annotation.Database;

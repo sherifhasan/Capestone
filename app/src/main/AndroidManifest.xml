@@ -3,8 +3,13 @@
     package="example.android.capestone">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
 
     <application
         android:name=".NewsApp"
@@ -39,13 +44,35 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/news_app_widget_info" />
         </receiver>
+
         <service
             android:name=".ui.widgets.ListWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
         <provider
-            android:authorities="example.android.capestone"
             android:name="example.android.capestone.data.generated.ArticlesProvider"
-            android:exported="true" />
+            android:authorities="example.android.capestone"
+            android:exported="true"
+            android:syncable="true" />
+
+        <service android:name=".data.sync.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".data.sync.ArticleSyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
     </application>
 
 </manifest>
