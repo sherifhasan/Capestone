@@ -16,7 +16,7 @@ import example.android.capestone.utility.Utility;
 public class MainActivity extends AppCompatActivity {
     private final String accountType = "example.android.capestone";
     private final String account = "dummyAccount";
-    private final String authority = "example.android.capestone.data.generated.ArticlesProvider";
+    private final String authority = "example.android.capestone.data.database.generated.ArticlesProvider";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -49,7 +49,7 @@
             android:name=".ui.widgets.ListWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
         <provider
-            android:name="example.android.capestone.data.generated.ArticlesProvider"
+            android:name="example.android.capestone.data.database.generated.ArticlesProvider"
             android:authorities="example.android.capestone"
             android:exported="true"
             android:syncable="true" />
